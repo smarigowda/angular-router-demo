@@ -9,11 +9,17 @@ import { ActivatedRoute } from '@angular/router';
 export class ProductDetailComponent implements OnInit {
   productId: string;
 
-  constructor(private route: ActivatedRoute) { 
-    this.productId = route.snapshot.paramMap.get('id');
+  constructor(private activeRoute: ActivatedRoute) { 
+    this.productId = activeRoute.snapshot.paramMap.get('id');
   }
 
   ngOnInit(): void {
+    this.activeRoute.queryParams.subscribe(queryParams => {
+      console.log('query params changed...', queryParams);
+    });
+    this.activeRoute.params.subscribe(routeParams => {
+      console.log('route params changed', routeParams);
+      this.productId = routeParams.id;
+    });
   }
-
 }
