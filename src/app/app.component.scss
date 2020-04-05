@@ -20,3 +20,21 @@ ul {
     margin: 0 auto;
     padding: 0;
 }
+
+nav {
+    display: flex;
+    justify-content: center;
+
+    & button {
+        font-size: 15px;
+        border-radius: 5px;
+        padding: 10px;
+        outline: none;
+        border: none;
+        &:hover {
+            color: white;
+            background: black;
+        }
+
+    }
+}
