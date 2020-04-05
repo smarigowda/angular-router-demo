@@ -11,6 +11,6 @@ export class AppComponent {
   productId = 1234;
   constructor(private router: Router) {}
   navigateToProductDetail() {
-    this.router.navigateByUrl('/product/123456');
+    this.router.navigateByUrl('/product/123456?category=school');
   }
 }
