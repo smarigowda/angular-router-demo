@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+// import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-product-detail',
@@ -9,6 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 export class ProductDetailComponent implements OnInit {
   productId: string;
   productCategory: string;
+  sellerId: string = '98767';
 
   constructor(private activeRoute: ActivatedRoute) { 
     this.productId = activeRoute.snapshot.paramMap.get('id');

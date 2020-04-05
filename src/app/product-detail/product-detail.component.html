@@ -1,3 +1,6 @@
 <h1 class="product">
-  Product: Id: {{ productId }}, Category: {{ productCategory }}
+  Product Detail for Product: Id: {{ productId }}, Category:
+  {{ productCategory }}
 </h1>
+<router-outlet></router-outlet>
+<p><a [routerLink]="['./seller', sellerId]">Show Seller Info</a></p>
