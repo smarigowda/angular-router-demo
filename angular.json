@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-router-demo"
+    }
+  },
+  "defaultProject": "angular-router-demo",
+  "cli": {
+    "analytics": "6e86bde4-a47e-4636-8ae9-69b730adf1ca"
+  }
 }
