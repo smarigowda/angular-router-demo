@@ -8,8 +8,9 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'angular-router-demo';
+  productId = 1234;
   constructor(private router: Router) {}
   navigateToProductDetail() {
-    this.router.navigate(['/product']);
+    this.router.navigate(['/product', '123456']);
   }
 }
