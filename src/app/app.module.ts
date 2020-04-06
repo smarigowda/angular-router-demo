@@ -6,11 +6,17 @@ import { AppComponent } from './app.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductDescriptionComponent } from './product-description/product-description.component';
 import { SellerInfoComponent } from './seller-info/seller-info.component';
+import { LoginGuard } from './login.guard';
 
 @NgModule({
-  declarations: [AppComponent, ProductDetailComponent, ProductDescriptionComponent, SellerInfoComponent],
+  declarations: [
+    AppComponent,
+    ProductDetailComponent,
+    ProductDescriptionComponent,
+    SellerInfoComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule],
-  providers: [],
+  providers: [LoginGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
