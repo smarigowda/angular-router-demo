@@ -5,9 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductDescriptionComponent } from './product-description/product-description.component';
+import { SellerInfoComponent } from './seller-info/seller-info.component';
 
 @NgModule({
-  declarations: [AppComponent, ProductDetailComponent, ProductDescriptionComponent],
+  declarations: [AppComponent, ProductDetailComponent, ProductDescriptionComponent, SellerInfoComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
