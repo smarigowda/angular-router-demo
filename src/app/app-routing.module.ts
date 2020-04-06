@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ProductDescriptionComponent } from './product-description/product-description.component';
 
 // const routes: Routes = [];
 
@@ -10,7 +11,8 @@ const routes: Routes = [
   {
     path: 'product/:id',
     component: ProductDetailComponent,
-    // children: [{ path: '', component: ProductDescriptionComponent }, {path: 'seller/:id', component: SellerInfoComponent}],
+    children: [{ path: '', component: ProductDescriptionComponent } ],
+    // children: [{ path: '', component: ProductDescriptionComponent } , {path: 'seller/:id', component: SellerInfoComponent}],
   },
 ];
 

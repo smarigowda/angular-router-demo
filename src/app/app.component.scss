@@ -2,6 +2,12 @@ a {
     margin: 10px;
     font-size: 25px;
     text-decoration: none;
+    border: 1px solid white;
+    padding: 5px;
+    &:hover {
+        border: solid cyan 1px;
+        border-radius: 5px;
+    }
 }
 
 .main {
