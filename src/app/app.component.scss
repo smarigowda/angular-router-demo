@@ -1,46 +1,52 @@
+:host {
+  display: block;
+}
+
 a {
-    margin: 10px;
-    font-size: 25px;
-    text-decoration: none;
-    border: 1px solid white;
-    padding: 5px;
-    &:hover {
-        border: solid cyan 1px;
-        border-radius: 5px;
-    }
+  margin: 10px;
+  font-size: 25px;
+  text-decoration: none;
+  border: 1px solid white;
+  padding: 5px;
+
+  &:hover {
+    border: solid cyan 1px;
+    border-radius: 5px;
+  }
 }
 
 .main {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 li {
-    text-decoration: none;
-    padding: 10px;
+  text-decoration: none;
+  padding: 10px;
 }
 
 ul {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    margin: 0 auto;
-    padding: 0;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
 }
 
 nav {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 
-    & button {
-        font-size: 15px;
-        border-radius: 5px;
-        padding: 10px;
-        outline: none;
-        border: none;
-        &:hover {
-            color: white;
-            background: black;
-        }
+  & button {
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+    border: none;
 
+    &:hover {
+      color: white;
+      background: black;
     }
+
+  }
 }
