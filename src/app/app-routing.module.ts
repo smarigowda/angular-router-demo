@@ -12,12 +12,15 @@ const routes: Routes = [
   {
     path: 'product/:id',
     component: ProductDetailComponent,
-    children: [{ path: '', component: ProductDescriptionComponent } , {path: 'seller/:id', component: SellerInfoComponent}],
+    children: [
+      { path: '', component: ProductDescriptionComponent },
+      { path: 'seller/:id', component: SellerInfoComponent },
+    ],
   },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { enableTracing: true })],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
