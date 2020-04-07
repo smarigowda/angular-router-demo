@@ -5,7 +5,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 @Injectable()
 export class UnsavedChangesGuard implements CanDeactivate<ProductDetailComponent> {
     canDeactivate(component: ProductDetailComponent) {
-        if(component.name.dirty) {
+        console.log(component.name);
+        if(component.name.dirty && component.name.value !== '') {
             return window.confirm("You have unsaved changes. Still want to leave ?");
         } else {
             return true;

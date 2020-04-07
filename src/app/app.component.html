@@ -11,10 +11,19 @@
         >Product with Children</a
       >
     </li>
+    <li>
+      <a [routerLink]="['', { outlets: { aux: 'chat' } }]" queryParamsHandling="merge">Open Chat</a>
+    </li>
+    <li>
+      <a [routerLink]="[{ outlets: { aux: null } }]" queryParamsHandling="merge">Close Chat</a>
+    </li>
   </ul>
   <nav>
-    <button (click)="navigateToProductDetail()">Product with Children (navigate using code)</button>
+    <button (click)="navigateToProductDetail()">
+      Product with Children (navigate using code)
+    </button>
   </nav>
 </section>
 
 <router-outlet></router-outlet>
+<router-outlet name="aux"></router-outlet>

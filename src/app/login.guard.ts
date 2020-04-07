@@ -13,11 +13,12 @@ export class LoginGuard implements CanActivate {
     console.log('ActivatedRouteSnapshot', destination);
     console.log('RouterStateSnapshot', state);
     const loggedIn = Math.random() < 0.5;
-    if (!loggedIn) {
-      alert('You  are not logged in, redirecting to Home page');
-      this.router.navigateByUrl('/');
-      return false;
-    }
+    // Uncomment the following lines to test login guard
+    // if (!loggedIn) {
+    //   alert('You  are not logged in, redirecting to Home page');
+    //   this.router.navigateByUrl('/');
+    //   return false;
+    // }
     return true;
   }
 }

@@ -9,6 +9,7 @@ import { ProductDescriptionComponent } from './product-description/product-descr
 import { SellerInfoComponent } from './seller-info/seller-info.component';
 import { LoginGuard } from './login.guard';
 import { UnsavedChangesGuard } from './unsaved.changes.guard';
+import { ChatComponent } from './chat/chat.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { UnsavedChangesGuard } from './unsaved.changes.guard';
     ProductDetailComponent,
     ProductDescriptionComponent,
     SellerInfoComponent,
+    ChatComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [LoginGuard, UnsavedChangesGuard],
