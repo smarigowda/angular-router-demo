@@ -5,17 +5,19 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { ProductDescriptionComponent } from './product-description/product-description.component';
 import { SellerInfoComponent } from './seller-info/seller-info.component';
 import { LoginGuard } from './login.guard';
+import { UnsavedChangesGuard } from './unsaved.changes.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   {
     path: 'product/:id',
     component: ProductDetailComponent,
+    canDeactivate: [UnsavedChangesGuard],
+    canActivate: [LoginGuard],
     children: [
       {
         path: '',
         component: ProductDescriptionComponent,
-        canActivate: [LoginGuard],
       },
       { path: 'seller/:id', component: SellerInfoComponent },
     ],

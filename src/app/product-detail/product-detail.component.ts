@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 // import { RouterModule } from '@angular/router';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-product-detail',
@@ -12,6 +13,8 @@ export class ProductDetailComponent implements OnInit {
   productId: string;
   productCategory: string;
   sellerId = '98767';
+
+  name: FormControl = new FormControl();
 
   constructor(private activeRoute: ActivatedRoute) { 
     this.productId = activeRoute.snapshot.paramMap.get('id');
